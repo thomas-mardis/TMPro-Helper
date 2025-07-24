@@ -421,12 +421,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<size=5>Hello World!</size><br><br><size=2>Type here to see live updates
-    in Unity.</size><br><indent=2em>1. <size=2>this is a list</size></indent><br><indent=2em>2.
-    <size=2>another</size></indent><br><indent=2em>3. <size=2>third</size></indent><br><size=3>this
-    is another list</size><br><indent=2em>\u2022 <size=3>bullet item</size></indent><br><indent=2em>\u2022
-    <size=3>second bullet</size></indent><br><indent=2em>\u2022 <size=3>anotherbullet</size></indent><br><size=3>Fooey
-    blah woo</size><br><size=3>last item to fit</size>"
+  m_text: "<b>This is a TextMeshPro Live Editor!</b><br><br><size=3>This editor allows
+    you to create rich text that will be updated in the Unity preview in real-time.
+    You can use the toolbar above to apply various styles.</size><br><size=3><b>Features
+    Include:</b></size><br><indent=2em><size=2>\u2022 Different </size><size=2><b>font
+    sizes</b></size><size=2> like Tiny and </size><size=5>Large.</size></indent><br><indent=2em><size=2>\u2022
+    Standard formatting such as </size><size=2><b>bold</b></size><size=2>, </size><size=2><i>italic</i></size><size=2>,
+    </size><size=2><u>underline</u></size><size=2>, and </size><size=2><s>strikethrough</s></size><size=2>.</size></indent><br><indent=2em><color=#E60000>\u2022
+    <size=2>Text coloring</size></color><size=2> and </size><mark=#FFFF0080><color=#000000><size=2>highlighting</size></color></mark><size=2>.</size></indent><br><indent=2em><size=2>\u2022
+    Ordered and unordered lists.</size></indent><br><br><b>Pro Tip:</b><br><size=2><i>If
+    formatting ever seems to be misbehaving, highlight the problematic text and click
+    the </i></size><size=2><b>Tx</b></size><size=2><i> button in the toolbar to clear
+    all styles and start fresh!</i></size>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
