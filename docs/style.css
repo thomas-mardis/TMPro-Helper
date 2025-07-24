@@ -1,0 +1,111 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827; /* gray-900 */
+    color: #f3f4f6; /* gray-100 */
+    overflow: hidden;
+}
+
+#app-container {
+    display: flex;
+    height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+#unity-column {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    max-width: 50%;
+}
+
+#controls-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #1f2937; /* gray-800 */
+    border-radius: 0.5rem;
+    padding: 1rem;
+    min-width: 0;
+}
+
+#unity-container {
+    width: 100%;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#unity-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Quill Editor Styles */
+#editor-container {
+    background-color: white;
+    color: #111827;
+    height: 450px; /* Set a fixed height for the editor container */
+    display: flex;
+    flex-direction: column;
+    flex: none; /* Prevent the parent flex container from resizing this item */
+}
+.ql-toolbar {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-color: #4b5563 !important; /* gray-600 */
+    border-bottom: 0 !important;
+}
+.ql-container {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-color: #4b5563 !important; /* gray-600 */
+    flex-grow: 1; /* Allow the content area to fill the container */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.ql-editor {
+    flex-grow: 1; /* Allow the editor itself to fill the container */
+    overflow-y: auto; /* Ensure editor is scrollable if content overflows */
+}
+
+/* TextMesh Pro Output Styles */
+.tmp-output {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #374151; /* gray-700 */
+    border: 1px solid #4b5563; /* gray-600 */
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    color: #e5e7eb; /* gray-200 */
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #3b82f6; /* blue-500 */
+    color: white;
+    border: none;
+    width: 100%;
+}
+.btn:hover {
+    background-color: #2563eb; /* blue-600 */
+}
+.btn:active {
+    transform: scale(0.98);
+}

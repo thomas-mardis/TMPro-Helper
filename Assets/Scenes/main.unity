@@ -217,6 +217,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &782628375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782628377}
+  - component: {fileID: 782628376}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &782628376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782628375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7f566db0c30ce469b582f4fd50b672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &782628377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782628375}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.20748278, y: 0.010888055, z: 0.8170004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,8 +382,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1678694948689655464}
   - {fileID: 9097521711670443988}
+  - {fileID: 1678694948689655464}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &1678694948689655464
@@ -377,20 +421,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<line-height=3.2><size=4><b>Apply Pad to Pt Thigh</b><br><size=2.2><b>In
-    VR:</b> Now, let\u2019s prepare the electrosurgical generator platform for the
-    electrocautery device.  Grab the grounding pad out of the package and attach
-    the pad to the patient\u2019s right lateral thigh.<br><b>In Practice:</b><br>WIth
-    any durable medical equipment such as the Bovie Pad / SCDs / Warming Blanket,
-    it\u2019s important to verify the expiration date before use.<br>Similarly, with
-    any of these types of equipment, save the Lot and Expiration information for
-    documentation purposes.<br>Choose a site that is near to, but does not interfere
-    with the surgical site.<br>Grounding pads typically have an adhesive backing
-    covered by a peel-away sheet that must be removed prior to attaching it to the
-    patient.<br>Ideally, select a muscular region of the body to allow for better
-    conduction and heat dissipation.<br>Avoid placement over metal implants, bony
-    prominences, or scar tissue.<br>If the presence of hair prevents the pad from
-    making full contact with the patient\u2019s skin, the area should be shaved first.</size>"
+  m_text: "<size=5>Hello World!</size><br><br><size=2>Type here to see live updates
+    in Unity.</size><br><indent=2em>1. <size=2>this is a list</size></indent><br><indent=2em>2.
+    <size=2>another</size></indent><br><indent=2em>3. <size=2>third</size></indent><br><size=3>this
+    is another list</size><br><indent=2em>\u2022 <size=3>bullet item</size></indent><br><indent=2em>\u2022
+    <size=3>second bullet</size></indent><br><indent=2em>\u2022 <size=3>anotherbullet</size></indent><br><size=3>Fooey
+    blah woo</size><br><size=3>last item to fit</size>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -598,7 +634,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4252956142507617701}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00000058114523}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000005811452}
   m_LocalPosition: {x: 0, y: 0, z: 0.259}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
@@ -629,3 +665,4 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 576509644355066259}
+  - {fileID: 782628377}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TV-ToolTip Editor | {{{ PRODUCT_NAME }}}</title>
+
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap">
+
+    <!-- Quill Editor CSS -->
+    <link href="quill.snow.css" rel="stylesheet">
+
+    <!-- Our External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app-container">
+    <!-- Left Column: Unity Canvas -->
+    <div id="unity-column">
+        <div id="unity-container">
+            <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} tabindex="1"></canvas>
+        </div>
+    </div>
+
+    <!-- Right Column: Editor Controls -->
+    <div id="controls-column">
+        <h2 class="text-xl font-bold">Live Text Editor</h2>
+
+        <!-- Quill Editor Container -->
+        <div id="editor-container">
+            <p>Hello <b>World</b>!</p>
+            <p>Type here to see <i>live updates</i> in Unity.</p>
+        </div>
+
+        <div>
+            <label for="tmp-output" class="block mb-2 text-sm font-medium text-gray-300">Live TextMesh Pro Output</label>
+            <pre id="tmp-output" class="tmp-output"></pre>
+        </div>
+
+        <div class="mt-auto">
+            <button id="copy-button" class="btn w-full">Copy TextMesh Pro</button>
+        </div>
+    </div>
+</div>
+
+<!-- Quill Editor JS -->
+<script src="quill.js"></script>
+<script src="turndown.js"></script>
+
+<!-- Unity Loader Script (from Unity build) -->
+<script src="Build/{{{ LOADER_FILENAME }}}"></script>
+
+<!-- Our external application logic -->
+<script src="script.js"></script>
+
+<!-- Inline script to initialize Unity and bridge to our external script -->
+<script>
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/{{{ DATA_FILENAME }}}",
+        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+        #if USE_THREADS
+        workerUrl: "Build/{{{ WORKER_FILENAME }}}",
+        #endif
+        #if USE_WASM
+        codeUrl: "Build/{{{ CODE_FILENAME }}}",
+        #endif
+        #if MEMORY_FILENAME
+        memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
+        #endif
+        #if SYMBOLS_FILENAME
+        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+        #endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+    productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+    productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+    }).then((instance) => {
+        console.log("Unity Instance captured and ready.");
+        // Initialize the application logic from our external script
+        initializeApp(instance);
+    }).catch((error) => {
+        console.error(error);
+    });
+</script>
+</body>
+</html>
